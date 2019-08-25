@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %} {{output.title}} {% endblock %}
+
+{% block content %}
+	<article>
+		<h2>{{output.title}}</h2>
+		{{output.description}}
+		<section>
+			{% for step in output.step_set.all %}
+				<h3>{{step.title}}</h3>
+				{{step.description}}
+			{% endfor %}
+		</section>
+	</article>
+{% endblock %}

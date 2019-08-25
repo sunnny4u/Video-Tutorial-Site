@@ -1,5 +1,17 @@
-{% for obj in output %}
-	<h1>The title is {{obj.title}}</h1>
-	Description:<p>{{obj.description}}</p>
+{% extends "layout.html" %}
 
-{% endfor %}
+{% block title %} Available Course {% endblock %}
+
+{% block content %}
+	<div class="cards">
+		{% for obj in output %}
+			<div class="card">
+			<header>
+				<a href="{% url 'detail' pk=obj.pk %}"> {{obj.title}}
+				</a>
+			</header>
+			<div class="card-copy">{{obj.description}}</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
