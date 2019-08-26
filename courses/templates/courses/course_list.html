@@ -7,7 +7,7 @@
 		{% for obj in output %}
 			<div class="card">
 			<header>
-				<a href="{% url 'detail' pk=obj.pk %}"> {{obj.title}}
+				<a href="{% url 'courses:detail' pk=obj.pk %}"> {{obj.title}}
 				</a>
 			</header>
 			<div class="card-copy">{{obj.description}}</div>

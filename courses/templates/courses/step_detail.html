@@ -3,7 +3,7 @@
 {% block title %} {{step.title}}-{{step.course.title}} {% endblock %}
 {% block content %}
 	<h2>{{step.title}}</h2>
-	<h3>{{step.course.title}}</h3>
+	<h3><a href="{% url 'courses:list' %}"> {{step.course.title}}</a></h3>
 	{{step.content|linebreaks}}
 
 {% endblock %}
